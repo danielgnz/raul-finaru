@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import heroImage from '../../assets/hero-section.jpg';
 
 const flexCenter = css`
     display:flex;
@@ -16,7 +15,7 @@ export const HeroSectionContainer = styled.div`
 
 export const HeroImageContainer = styled.div`
     &::before {
-        background: url(${heroImage});
+        ${({image}) => image ? `background: url(${image});` : `background: #fff;`}
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -63,6 +62,7 @@ export const HeroTitle = styled.h1`
     text-transform: uppercase;
     font-weight: 800;
     font-size: 150%;
+    letter-spacing: 0.05em;
 `;
 export const HeroSubtitle = styled.h2`
     ${heroMessageElements}

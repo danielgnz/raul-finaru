@@ -9,19 +9,19 @@ import {
     HeroButton
 } from './hero-section.style';
 
-export const HeroSection = () => {
+export const HeroSection = ({image, title, subtitle, btnText, ...otherProps}) => {
     return (
         <HeroSectionContainer >
-            <HeroImageContainer flexCenter>
+            <HeroImageContainer flexCenter image={image}>
                 <HeroMessage>
                     <HeroTitle>
-                        STOP SELLING, START CLOSING
+                        {title}
                     </HeroTitle>
                     <HeroSubtitle>
-                       ONE-CALL CLOSER METHODOLOGY
+                       {subtitle}
                     </HeroSubtitle>
                     <HeroButton>
-                        Get Started
+                        {btnText}
                     </HeroButton>
                 </HeroMessage>
             </HeroImageContainer>

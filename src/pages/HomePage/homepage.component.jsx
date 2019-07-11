@@ -11,10 +11,17 @@ import QualifyingExtra from '../../components/QualifyingExtra/qualifying-extra.c
 import Connect from '../../components/Connect/connect.component';
 import FinalNavigation from '../../components/FinalNavigation/final-navigation.component';
 
+import heroImage from '../../assets/home-hero.jpg';
+
 export const Home = () => {
     return (
         <div className="homepage">
-            <HeroSection />
+            <HeroSection 
+                image={heroImage}
+                title={`STOP SELLING START CLOSING`}
+                subtitle={`ONE-CALL CLOSER METHODOLOGY`}
+                btnText={`GET STARTED`}
+            />
             <AboutSection />
             <StatsSection />
             <TextSection />
