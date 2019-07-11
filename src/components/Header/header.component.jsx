@@ -46,10 +46,10 @@ class Header extends React.Component  {
 
                 <OptionsContainer isOpen={isMenuOpen}>
                     <OptionLink to="/"  >
-                        LINK 1
+                        Home
                     </OptionLink>
-                    <OptionLink to="/"  >
-                        LINK 2
+                    <OptionLink to="/hire"  >
+                        Hire Raul
                     </OptionLink>
                     <OptionLink to="/"  >
                         LINK 3
