@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import bgImage from '../../assets/connect-with-raul.png';
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     height: 90vh;

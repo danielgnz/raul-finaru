@@ -1,11 +1,9 @@
 import React from 'react';
-import divider from '../../assets/divider-white-bg.jpg';
 
 import {
     Container,
     Group,
     InnerGroup,
-    Title,
     SubTitle,
     SmallDivider,
     Paragraph,
