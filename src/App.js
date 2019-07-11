@@ -2,7 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 //pages
-import Home from './pages/Home/home.component';
+import HomePage from './pages/HomePage/homepage.component';
+import HirePage from './pages/HirePage/hirepage.component';
 
 //components
 import Header from './components/Header/header.component';
@@ -12,7 +13,8 @@ export const App = () => {
     <div>
       <Header />
       <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={HomePage} />
+          <Route path='/hire' component={HirePage} />
       </Switch>
     </div>
    

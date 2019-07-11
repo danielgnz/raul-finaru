@@ -42,7 +42,9 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
     z-index: 3;
     color #fff;
-    
+    text-decoration: none;
+    font-size: 60%;
+    letter-spacing: 0.05em;
 `;
 
 export const Hamburger = styled.div`
