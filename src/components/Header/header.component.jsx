@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import logo from '../../assets/logo.png';
 
@@ -41,7 +41,7 @@ class Header extends React.Component  {
         return (
             <HeaderContainer>
                 <LogoContainer to='/'>
-                    <img src={logo} />
+                    <img alt='logo' src={logo} />
                 </LogoContainer>
 
                 <OptionsContainer isOpen={isMenuOpen}>
