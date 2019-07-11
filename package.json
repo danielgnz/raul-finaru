@@ -2,7 +2,7 @@
   "name": "raulfinaru",
   "version": "0.1.0",
   "private": true,
-  "home": "https://danielgnz.github.io/raul-finaru/",
+  "homepage": "https://danielgnz.github.io/raul-finaru/",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
