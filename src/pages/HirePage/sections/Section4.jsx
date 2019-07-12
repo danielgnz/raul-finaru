@@ -7,26 +7,26 @@ import CheckIcon from '../../../utils/icons/CheckIcon';
 
 const classes = {
     text: {
-        color: "#fff",
+        color: "#000",
         size: "60",
         padding: "1",
     },
     heading: {
-        color: "#F5CA7B",
+        color: "#000",
         size: "70",
         padding: "1",
         spacing: "0.05",
         weight: "600",
     },
     icon: {
-        color: 'rgb(43, 255, 64)',
+        color: 'green',
         marginRight: '10px'
     }
 }
 
 export const Section4 = () => {
     return (
-        <Container>
+        <Container bgColor="#fff">
             <Text {...classes.heading}>
                 Imagine how your business would change if you could...
             </Text>

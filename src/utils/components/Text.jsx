@@ -8,6 +8,7 @@ const textStyle = css`
     ${({color}) => `color: ${color ? color : `#fff`};`}
     ${({padding}) => padding && `padding: ${padding}rem;`}
     ${({weight}) => weight && `font-weight: ${weight};`}
+    ${({uppercase}) => uppercase && `text-transform: uppercase;`}
 `;
 
 export const Text = ({children, variant, ...otherProps}) => {

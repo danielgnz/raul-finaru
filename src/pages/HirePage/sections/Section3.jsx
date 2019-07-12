@@ -20,6 +20,7 @@ const classes = {
     },
     icon : {
         marginRight: '10px',
+        color: '#aa0209'
     }
 }
 
