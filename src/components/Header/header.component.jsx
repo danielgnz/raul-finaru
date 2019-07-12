@@ -51,8 +51,8 @@ class Header extends React.Component  {
                     <OptionLink to="/hire"  >
                         Hire Raul
                     </OptionLink>
-                    <OptionLink to="/"  >
-                        LINK 3
+                    <OptionLink to="/what-is-a-high-ticket-closer">
+                        What is HTC?
                     </OptionLink>
                 </OptionsContainer>
 
