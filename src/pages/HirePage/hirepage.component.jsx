@@ -9,6 +9,7 @@ import Section6 from './sections/Section6';
 import Section7 from './sections/Section7';
 import Section8 from './sections/Section8';
 import Section9 from './sections/Section9';
+import Section10 from './sections/Section10';
 
 export const HirePage = () => {
     return (
@@ -22,6 +23,7 @@ export const HirePage = () => {
             <Section7 />
             <Section8 />
             <Section9 />
+            <Section10 />
         </div>
     )
 }

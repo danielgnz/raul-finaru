@@ -16,6 +16,11 @@ const classes = {
         spacing: "0.05",
         weight: "600",
     },
+    headline: {
+        variant: "h1",
+        align: "center",
+        size: "130",
+    },
 }
 
 export const Section8 = () => {
@@ -73,6 +78,15 @@ export const Section8 = () => {
                 <Text {...classes.text}>
                     So you literally can’t lose.
                 </Text>
+
+                <Container bgColor="#fff">
+                    <Text {...classes.headline} uppercase color="#aa0209">
+                        Warning:
+                    </Text>
+                    <Text {...classes.heading} color="#aa0209" align="center" uppercase size="80">
+                        Time Is A Factor
+                    </Text>
+                </Container>
 
             </Container>
     )

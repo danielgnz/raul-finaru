@@ -5,12 +5,14 @@ import styled from 'styled-components';
 const ContainerStyle = styled.div`
     display: flex;
     flex-direction: column;
-    ${({height}) => height && `height: ${height}vh`}
-    ${({width}) => width && `width: ${width}vw`}
+    ${({row}) => row && `flex-direction: row;`}
+    ${({justifyContent}) => `justify-content: ${justifyContent ? justifyContent : `flex-start`};`}
+    ${({wrap}) => `flex-wrap: ${wrap ? wrap : `nowrap`};`}
     ${({center}) => center && `justify-content: center; align-items: center;`}
+    ${({height}) => height && `height: ${height}vh`}
+    ${({width}) => width && `width: ${width}vw`}\
     ${({bgColor}) => `background: ${bgColor ? bgColor : `#000`};`}
     ${({color}) => `color: ${color ? color : `#fff`};`}
-
 `;
 
 
