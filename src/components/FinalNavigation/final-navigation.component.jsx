@@ -14,18 +14,22 @@ export const FinalNavigation = () => {
             <Title>
             Where do you want to go from here?
             </Title>
+
+            {/* Optional Text */}
+            
             <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec.
+                You have seen my homepage and you still haven't taken action. I don't know why is that, but I can help you figure it out.
             </Text>
+
             <Wrapper>
                 <Button>
-                    GO TO PAGE X
+                    WORK WITH RAUL
                 </Button>
                 <Button>
-                    GO TO PAGE X
+                    WHAT IS HTC
                 </Button>
                 <Button>
-                    GO TO PAGE X
+                    RAUL'S STORY
                 </Button>
             </Wrapper>
         </Container>

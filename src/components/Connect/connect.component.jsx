@@ -1,14 +1,32 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import {
-    Container,
-    InnerContainer,
-    Heading,
-    Text,
-    Wrapper,
-    Button,
+import Container from '../../utils/components/Container';
+import Text from '../../utils/components/Text';
 
-} from './connect.style';
+import bgImage from '../../assets/connect-with-raul.png';
+
+const StyledContainer = styled(Container)`
+    background: url(${bgImage});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+`;
+
+const StyledInnerContainer = styled(Container)`
+    height: 80%;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.8);
+`;
+
+const Button = styled.div`
+    color: #F5CA7B;
+    background: #000;
+    padding: .7rem 3rem;
+    border-radius: 10px;
+    font-size: 40%;
+    font-weight: 600;
+`;
 
 const classes = {
     icon: {
@@ -21,15 +39,33 @@ const classes = {
 
 export const Connect = () => {
     return(
-       <Container>
-           <InnerContainer>
-                <Heading>
+       <StyledContainer height="90" center>
+           <StyledInnerContainer center color="#000">
+                <Text 
+                    color="#000"
+                    variant="h1" 
+                    size="70" 
+                    weight="600" 
+                    spacing={.05} 
+                    style={{lineHeight: '1.25em'}}
+                >
                     <span style={{color:'#6d0308'}}>Connect</span> With Raul
-                </Heading>
-                <Text>
+                </Text>
+                <Text
+                    size="50"
+                    align="center"
+                    spacing={.05}
+                    color="#000"
+                    style={{padding: '0 2rem'}}
+                >
                     Get the latest news and updates on all things Raul Finaru.
                 </Text>
-                <Wrapper>
+                <Container
+                    bgColor="rgba(255, 255, 255, 0)"
+                    height="25"
+                    justifyContent="space-between"
+                    style={{marginTop: '1rem'}}
+                >
                     <Button>
                         <i className="fab fa-facebook-f" style={classes.icon}/>
                         Follow @Raul Finaru
@@ -42,9 +78,9 @@ export const Connect = () => {
                         <i className="fas fa-mail-bulk" style={classes.icon}/>
                         Send An Email
                     </Button>
-                </Wrapper>
-           </InnerContainer>
-       </Container> 
+                </Container>
+           </StyledInnerContainer>
+       </StyledContainer> 
     )
 }
 

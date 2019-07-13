@@ -1,69 +1,40 @@
 import React from 'react';
 
 import {
-    Container,
-    Group,
-    InnerGroup,
-    SubTitle,
     SmallDivider,
-    Paragraph,
     ButtonLink,
     RightArrow,
-    ReadMoreWrapper,
     TextLink,
 
 } from './read-more.style';
 
-export const ReadMore = () => {
+import Container from '../../utils/components/Container';
+import Text from '../../utils/components/Text';
+
+export const ReadMore = ({title, text, ...otherProps}) => {
     return (
-        <Container>
-            {/* <Title>
-                    Lorem ipsum dolor sit amet.
-            </Title> */}
-            <Group>
-                <InnerGroup>
-                    <SubTitle>
-                        Vivamus tempor tristique?
-                    </SubTitle>
-                    <SmallDivider /> 
-                </InnerGroup>
-                <Paragraph>
-                Curabitur dignissim velit a egestas semper. Aliquam est ligula, pulvinar nec sollicitudin vitae, condimentum sit amet mi. Vestibulum rutrum nisl...
-                </Paragraph>
-                <ReadMoreWrapper>
-                    <ButtonLink to ='#'>
-                        <RightArrow>
-                            &#8250;
-                        </RightArrow>
-                    </ButtonLink>
-                    <TextLink to='#'>
-                        Read More
-                    </TextLink>
-                </ReadMoreWrapper>
-            </Group>
-            <Group>
-                <InnerGroup>
-                    <SubTitle>
-                    Suspendisse pulvinar lacus et?
-                    </SubTitle>
-                    <SmallDivider /> 
-                </InnerGroup>
-                <Paragraph>
-                Nullam ornare risus in massa dictum placerat. Nunc quis tellus eu neque pretium placerat. Maecenas congue congue mattis. Vestibulum hendrerit...
-                </Paragraph>
-                <ReadMoreWrapper>
-                    <ButtonLink to ='#'>
-                        <RightArrow>
-                            &#8250;
-                        </RightArrow>
-                    </ButtonLink>
-                    <TextLink to='#'>
-                        Read More
-                    </TextLink>
-                </ReadMoreWrapper>
-            </Group>
-           
+        <Container  bgColor="#fff" alignItems="center" justifyContent="space-evenly" style={{height: '50%'}}>
+            <Container  bgColor="#fff" center>
+                <Text variant="h3" size="65" spacing={0.05} color="#6d0308" weight="500">
+                    {title}
+                </Text>
+                <SmallDivider />
+            </Container> 
+            <Text color="#000" size="45" align="center" spacing={0.05} style={{lineHeight: '1.5em', margin: '0.05em'}}>
+                {text}
+            </Text>
+            <Container bgColor="#fff" alignItems="center" justifyContent="space-between" height="12">
+                <ButtonLink to ='#'>
+                    <RightArrow>
+                        &#8250;
+                    </RightArrow>
+                </ButtonLink>
+                <TextLink to='#'>
+                    Read More
+                </TextLink>
+            </Container>
         </Container>
+
     )
 }
 

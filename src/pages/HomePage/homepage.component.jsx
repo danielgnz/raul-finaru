@@ -1,36 +1,51 @@
 import React from 'react';
 
-import HeroSection from '../../components/HeroSection/hero-section.component';
-import AboutSection from '../../components/AboutSection/about-section.component';
-import TextSection from '../../components/TextSection/text-section.component';
-import StatsSection from '../../components/StatsSection/stats-section.component';
-import QualifyingSection from '../../components/QualifyingSection/qualifying-section.component';
-import ReadMore from '../../components/ReadMore/read-more.component';
-import Testimonials from '../../components/Testimonials/testimonials.component';
-import QualifyingExtra from '../../components/QualifyingExtra/qualifying-extra.component';
-import Connect from '../../components/Connect/connect.component';
 import FinalNavigation from '../../components/FinalNavigation/final-navigation.component';
 
-import heroImage from '../../assets/home-hero.jpg';
+import Section1 from './sections/Section1';
+import Section2 from './sections/Section2';
+import Section3 from './sections/Section3';
+import Section4 from './sections/Section4';
+import Section5 from './sections/Section5';
+import Section6 from './sections/Section6';
+import Section7 from './sections/Section7';
+import Section8 from './sections/Section8';
+import Section9 from './sections/Section9';
 
 export const Home = () => {
     return (
         <div className="homepage">
-            <HeroSection 
-                image={heroImage}
-                title={`STOP SELLING START CLOSING`}
-                subtitle={`ONE-CALL CLOSER METHODOLOGY`}
-                btnText={`GET STARTED`}
-            />
-            <AboutSection />
-            <StatsSection />
-            <TextSection />
-            <ReadMore/>
-            <QualifyingSection />
-            <Testimonials />
-            <QualifyingExtra />
-            <Connect />
+
+            {/* Hero Section */}
+            <Section1 />
+
+            {/* Who is the Headshot Closer? */}
+            <Section2 />
+
+            {/* Stats and Figures */}
+            <Section3 />
+
+            {/* Meet Raul */}
+            <Section4 />
+
+            {/* Read More Section */}
+            <Section5 />
+
+            {/* Qualifying Section */}
+            <Section6 />
+
+            {/* What Leaders have to say */}
+            <Section7 />
+            
+            {/* Are you a Coach, Consultant or Thought Leader  */}
+            <Section8 />
+
+            {/* Connect with Raul */}
+            <Section9 />
+
+            {/* Where do you want to go from here? */}
             <FinalNavigation />
+            
         </div>        
     )
 }

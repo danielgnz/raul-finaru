@@ -7,6 +7,7 @@ const ContainerStyle = styled.div`
     flex-direction: column;
     ${({row}) => row && `flex-direction: row;`}
     ${({justifyContent}) => `justify-content: ${justifyContent ? justifyContent : `flex-start`};`}
+    ${({alignItems}) => alignItems && `align-items: ${alignItems};`}
     ${({wrap}) => `flex-wrap: ${wrap ? wrap : `nowrap`};`}
     ${({center}) => center && `justify-content: center; align-items: center;`}
     ${({height}) => height && `height: ${height}vh`}
