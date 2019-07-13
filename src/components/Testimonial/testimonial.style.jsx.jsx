@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Row } from '../../utils/components/Grid';
+import Text from '../../utils/components/Text';
 
 export const TestimonialName = styled(Row)`
     width: 100%;
@@ -10,6 +11,7 @@ export const TestimonialName = styled(Row)`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    ${({bgColor}) => bgColor && `background: ${bgColor};`}
 `;
 
 export const AvatarImg = styled.div`
@@ -34,4 +36,9 @@ export const LinkedInBtn = styled.div`
     cursor: pointer;
     margin-bottom: 1rem;
     border-radius: 10px;
+`;
+
+export const StyledText = styled(Text)`
+    color: #000;
+    ${({color}) => color && `color: ${color};`}
 `;

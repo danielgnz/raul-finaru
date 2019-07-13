@@ -1,9 +1,5 @@
 import React from 'react';
 
-
-import Container from '../../utils/components/Container';
-import Text from '../../utils/components/Text';
-
 import { Column } from '../../utils/components/Grid';
 
 import {
@@ -11,12 +7,13 @@ import {
     AvatarImg,
     Image,
     LinkedInBtn,
+    StyledText,
 } from './testimonial.style.jsx';
 
 
 export const Testimonial = ({name, avatar, link, text, ...otherProps}) => {
     return (
-        <TestimonialName>
+        <TestimonialName {...otherProps}>
             <Column 
                 xs={12}
                 sm={4} 
@@ -28,13 +25,13 @@ export const Testimonial = ({name, avatar, link, text, ...otherProps}) => {
                 <AvatarImg>
                     <Image alt='client' src={avatar} />
                 </AvatarImg>
-                <Text
+                <StyledText
+                    {...otherProps}
                     size="40"
-                    color="#000"
                     weight="600"
                 >
                     {name}
-                </Text>
+                </StyledText>
                 <a href={link}>
                     <LinkedInBtn>
                         <i className="fab fa-linkedin-in" style={{color: '#fff'}}/>
@@ -50,15 +47,15 @@ export const Testimonial = ({name, avatar, link, text, ...otherProps}) => {
                 justifyContent="center" 
                 
             >
-                <Text 
-                    color="#000" 
+                <StyledText
+                    {...otherProps}
                     size="40"
                     padding={1}
                 >
                     <cite>
                         {text}
                     </cite>
-                </Text>
+                </StyledText>
             </Column>
         </TestimonialName>
     )
