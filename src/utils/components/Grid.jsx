@@ -1,11 +1,18 @@
+import React from 'react';
 import styled from 'styled-components';
 
-export const Row = styled.div`
-    &::after {
-        content: '';
-        clear: both;
-        display: table;
-    }
+export const RowStyle = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    ${({flexDirection}) => flexDirection && `flex-direction: ${flexDirection};`}
+    ${({alignItems}) => alignItems && `align-items: ${alignItems};`}
+    ${({flexWrap}) => flexWrap && `flex-wrap: ${flexWrap};`}
+    ${({justifyContent}) => justifyContent && `justify-content: ${justifyContent};`}    
+
 `;
 
 const getWidthString = (span) => {
@@ -15,10 +22,15 @@ const getWidthString = (span) => {
     return `width: ${width}%`;
 }
 
-export const Column = styled.div`
-    float: left;
-    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
+export const ColumnStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    ${({alignItems}) => alignItems && `align-items: ${alignItems};`}
+    ${({flexWrap}) => flexWrap && `flex-wrap: ${flexWrap};`}
+    ${({justifyContent}) => justifyContent && `justify-content: ${justifyContent};`}
     
+    ${({ xs }) => (xs ? getWidthString(xs) : 'width: 100%')};
+
     @media only screen and (min-width: 768px) {
         ${({ sm }) => sm && getWidthString(sm)};
     }
@@ -31,3 +43,11 @@ export const Column = styled.div`
         ${({ lg }) => lg && getWidthString(lg)};
     }
 `;
+
+export function Row({children, ...otherProps}) {
+    return <RowStyle {...otherProps}> {children} </RowStyle>
+}
+
+export function Column({children, ...otherProps}) {
+    return <ColumnStyle {...otherProps}> {children} </ColumnStyle>
+}

@@ -17,6 +17,13 @@ const StyledInnerContainer = styled(Container)`
     height: 80%;
     width: 90%;
     background: rgba(255, 255, 255, 0.8);
+
+    @media only screen and (min-width: 768px) {
+        width: 75%;
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 50%;
+    }
 `;
 
 const Button = styled.div`
@@ -26,6 +33,7 @@ const Button = styled.div`
     border-radius: 10px;
     font-size: 40%;
     font-weight: 600;
+    cursor: pointer;
 `;
 
 const classes = {

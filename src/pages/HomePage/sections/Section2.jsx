@@ -25,7 +25,7 @@ export const Section2 = () => {
                 size="90"
                 spacing={0.1}
                 uppercase
-                style={{height: '20vh', lineHeight: '1.25em'}}
+                style={{lineHeight: '1.25em', padding:'1rem'}}
             >
                 Who is the Headshot Closer™?
             </Text>

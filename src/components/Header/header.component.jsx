@@ -37,7 +37,7 @@ class Header extends React.Component  {
 
     render() {
         const { isMenuOpen } = this.state;
-
+        
         return (
             <HeaderContainer>
                 <LogoContainer to='/'>
@@ -61,6 +61,7 @@ class Header extends React.Component  {
                     <Line />
                     <Line />
                 </Hamburger>
+                
 
             </HeaderContainer>
         )

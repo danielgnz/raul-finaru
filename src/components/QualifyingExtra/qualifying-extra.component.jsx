@@ -13,21 +13,38 @@ const classes = {
 
 }
 
+const StyledContainer = styled(Container)`
+    @media only screen and (min-width: 768px) {
+        width: 75vw;
+    }
+`;
+
+const StyledText = styled(Text)`
+    @media only screen and (min-width: 768px) {
+        width: 75vw;
+    }
+    @media only screen and (min-width: 1024px) {
+        width: 50vw;
+    }
+`;
+
 export const LinkText = styled(Link)`
     margin-top: 1rem;
     font-size: 50%;
     text-align: center;
     color: #6d0308;
+    padding: 1rem;
+    margin-bottom: 1rem;
 `
 
 export const QualifyingExtra = () => {
     return (
         <Container 
-            height="90" 
             bgColor="#fff" 
             color="#000"
+            center
         >
-            <Text 
+            <StyledText 
                 color="#000"
                 variant="h1" 
                 align="center" 
@@ -38,8 +55,8 @@ export const QualifyingExtra = () => {
                 style={{lineHeight: '1.25em'}}
             >
             Are You A Coach, Consultant, or Thought Leader That Sells A High-Ticket Product or Service?
-            </Text>
-            <Container 
+            </StyledText>
+            <StyledContainer 
                 bgColor="#fff" 
                 color="#000"
             > 
@@ -56,7 +73,7 @@ export const QualifyingExtra = () => {
                     <i className="fas fa-check-square" style={classes.icon}/>
                     Are you spending endless amounts of money, energy, and resources on training your staff and new employees to get little to no return?
                 </Text>
-            </Container>
+            </StyledContainer>
                 <LinkText to='/'>
                     If so, discover why you should work with Raul.
                 </LinkText>

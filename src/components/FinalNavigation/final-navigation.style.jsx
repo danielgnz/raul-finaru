@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+
 `;
 
 export const Title = styled.h1`
@@ -57,3 +57,12 @@ export const Button = styled.div`
     cursor: pointer;
 
 `;
+
+export const StyledContainer = styled(Container)`
+    @media only screen and (min-width: 768px) {
+        width: 75vw;
+    }
+    @media only screen and (min-width: 1440px) {
+        width: 50vw;
+    }
+`; 

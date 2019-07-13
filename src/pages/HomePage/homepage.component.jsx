@@ -12,42 +12,70 @@ import Section7 from './sections/Section7';
 import Section8 from './sections/Section8';
 import Section9 from './sections/Section9';
 
-export const Home = () => {
-    return (
-        <div className="homepage">
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0,
+            height: 0,
+        };
+    }
 
-            {/* Hero Section */}
-            <Section1 />
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
 
-            {/* Who is the Headshot Closer? */}
-            <Section2 />
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
 
-            {/* Stats and Figures */}
-            <Section3 />
+    updateWindowDimensions = () => {
+        this.setState({
+            width: window.innerWidth,
+            height: window.innerHeight,
+        })
+    }
 
-            {/* Meet Raul */}
-            <Section4 />
+    render() {
+        const { width, height } = this.state;
 
-            {/* Read More Section */}
-            <Section5 />
+        return (
+            <div className="homepage">
 
-            {/* Qualifying Section */}
-            <Section6 />
+                {/* Hero Section */}
+                <Section1 width={width}/>
 
-            {/* What Leaders have to say */}
-            <Section7 />
-            
-            {/* Are you a Coach, Consultant or Thought Leader  */}
-            <Section8 />
+                {/* Who is the Headshot Closer? */}
+                <Section2 />
 
-            {/* Connect with Raul */}
-            <Section9 />
+                {/* Stats and Figures */}
+                <Section3 />
 
-            {/* Where do you want to go from here? */}
-            <FinalNavigation />
-            
-        </div>        
-    )
+                {/* Meet Raul */}
+                <Section4 />
+
+                {/* Read More Section */}
+                <Section5 />
+
+                {/* Qualifying Section */}
+                <Section6 />
+
+                {/* What Leaders have to say */}
+                <Section7 />
+                
+                {/* Are you a Coach, Consultant or Thought Leader  */}
+                <Section8 />
+
+                {/* Connect with Raul */}
+                <Section9 />
+
+                {/* Where do you want to go from here? */}
+                <FinalNavigation />
+                
+            </div>        
+        )
+    }
 }
 
 export default Home;

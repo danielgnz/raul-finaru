@@ -3,44 +3,19 @@ import React from 'react';
 import HeroSection from '../../../components/HeroSection/hero-section.component';
 import heroImage from '../../../assets/home-hero.jpg';
 
-class Section1 extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            width: 0,
-        };
-    }
+export const Section1 = ({ width }) => {
 
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
-    updateWindowDimensions = () => {
-        this.setState({
-            width: window.innerWidth
-        })
-    }
-
-    render() {
-        const { width } = this.state;
-        
         const title = width < 565 ? 'STOP SELLING START CLOSING' : 'STOP SELLING, START CLOSING'; 
-        
+        const subtitle = width < 565 ? '10X Your Sales • Income • Life' : '10X Your Sales  •  10X Your Income   •   10X Your Life';
         return (
             <HeroSection 
                 image={heroImage}
                 title={title}
-                subtitle={`10X Your Sales • Income • Life`}
+                subtitle={subtitle}
                 btnText={`GET STARTED`}
             />
         )
-    }
-    
+ 
 }
 
 export default Section1;

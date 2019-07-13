@@ -23,32 +23,53 @@ export const LogoContainer = styled(Link)`
 `
 
 export const OptionsContainer = styled.div`
-    position: fixed;
-    width: 100%;
-    height: 30vh;
-    display: ${props => (props.isOpen ? 'flex' : 'none')};
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1;
-    top: 10%;
-    right: 0%;
-    margin-right: 0;
-    opacity: 1;
-    background: #000;
-    cursor: pointer;
+    
+    @media only screen and (max-width: 767px) {
+        position: fixed;
+        width: 100%;
+        height: 30vh;
+        display: ${props => (props.isOpen ? 'flex' : 'none')};
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1;
+        top: 10%;
+        right: 0%;
+        margin-right: 0;
+        opacity: 1;
+        background: #000;
+        cursor: pointer;
+    }
+    
 `;
 
 export const OptionLink = styled(Link)`
-    z-index: 3;
-    color #fff;
+    font-size: 50%;
     text-decoration: none;
-    font-size: 60%;
+    margin-right: 2rem;
+    color: #fff;
     letter-spacing: 0.05em;
+
+
+    @media only screen and (max-width: 767px) {
+        z-index: 3;
+        font-size: 60%;
+        letter-spacing: 0.05em;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+   
 `;
 
 export const Hamburger = styled.div`
     margin: 1rem;
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
 `;
 
 export const Line = styled.div`

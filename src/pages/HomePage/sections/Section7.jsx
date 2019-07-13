@@ -3,30 +3,26 @@ import styled from 'styled-components';
 
 import Container from '../../../utils/components/Container';
 import Text from '../../../utils/components/Text';
+import Testimonial from '../../../components/Testimonial/testimonial.component.jsx';
 
-import t1 from '../../../assets/t1-name.png';
-import t2 from '../../../assets/t2-name.png';
-import t3 from '../../../assets/t3-name.png';
+import avt1 from '../../../assets/t1-avatar.jpeg';
+import avt2 from '../../../assets/t2-avatar.jpeg';
+import avt3 from '../../../assets/t3-avatar.jpeg';
 
 
-export const TestimonialName = styled.div`
+import { Row, Column } from '../../../utils/components/Grid';
+
+
+const StyledContainer = styled(Container)`
     width: 90vw;
-    background: #fff;
-    margin: .5rem;
-    position: relative;
-    text-align: center;
+    @media only screen and (min-width: 768px) {
+        width: 75vw;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        width: 50vw;
+    }
 `;
-
-export const TestimonialMessage = styled.div`
-    position: absolute;
-    height: 40vh;
-    background: rgba(0, 0, 0, 0.5);
-    width: 45vw;
-    top: 0;
-    right: 0;
-`;
-
-
 
 export const Section7 = () => {
     return (
@@ -44,32 +40,31 @@ export const Section7 = () => {
             >
                 What others say about Raul
             </Text>
-            <Container 
-                row
-                justifyContent="center"
-                wrap="wrap"
-                alignItems="center"
-                style={{height: '75%'}}
+            <StyledContainer 
+                center
             >
-                <TestimonialName>
-                    <img alt='client' src={t1} />
-                    
-                </TestimonialName>
-                
+                <Testimonial
+                    name="Stefan Morariu"
+                    avatar={avt1}
+                    link="#"
+                    text={`"Raul was one of my assigned students during the HTC course. He came in prepared, showed incredible work ethic and overdelivered constantly. In the later weeks he proofed his action taking and signed his first contract as a closer. I also appreciate the way he communicated with the team and me. I can highly recommend him."`}
+                />
 
-                <TestimonialName>
-                    <img alt='client' src={t2} />
-                    
-                </TestimonialName>
-                
+                <Testimonial
+                    name="Delvin Gandy"
+                    avatar={avt2}
+                    link="#"
+                    text={`"I worked with Raul a number of times and I have to tell you. Raul is one of the best communicators I’ve met. He is driven, a great motivator and has a strong passion for what he does. He makes it look effortless, that’s what happens when you have someone who is committed to results while also adding value."`}
+                />
 
-                <TestimonialName>
-                    <img alt='client' src={t3} />
-                    
-                </TestimonialName>
-                
-
-            </Container>
+                <Testimonial
+                    name="Oskar E.V.Lundtoft"
+                    avatar={avt3}
+                    link="#"
+                    text={`"Raul is an incredible fighter. I have never ever in my life met such an ambitious guy. He is a person that strives for success no matter the condition. If I were to hire a new leader on my team, Raul would definitely be the one."`}
+                />
+            
+            </StyledContainer>
         </Container>
     )
 }
