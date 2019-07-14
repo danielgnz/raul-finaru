@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
     width: 100%;
     top: 0;
     background: #000;
-    z-index: 1;
+    z-index: 9999;
 `;
 
 export const LogoContainer = styled(Link)`
@@ -32,7 +32,7 @@ export const OptionsContainer = styled.div`
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        z-index: 1;
+        z-index: 9999;
         top: 10%;
         right: 0%;
         margin-right: 0;
@@ -52,7 +52,7 @@ export const OptionLink = styled(Link)`
 
 
     @media only screen and (max-width: 767px) {
-        z-index: 3;
+        z-index: 9999;
         font-size: 60%;
         letter-spacing: 0.05em;
     }

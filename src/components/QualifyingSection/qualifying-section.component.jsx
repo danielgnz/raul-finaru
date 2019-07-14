@@ -93,8 +93,11 @@ export const QualifyingSection = () => {
                     </Text>
 
                 <div style={{marginBottom: '1em'}}>
-                    <Button>
-                    Book a call
+                    <Button id="callCalendly" onClick={() => {
+                        window.Calendly.showPopupWidget('https://calendly.com/raulfinaru/30minutes');
+                        return false;
+                    }}> 
+                        Book a call
                     </Button>
                 </div>
             </StyledContainer>

@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Container from '../../../utils/components/Container';
 import Text from '../../../utils/components/Text';
+
+import {Row, Column} from '../../../utils/components/Grid';
+
+import FinalNavigation from '../components/FinalNavigation';
 
 //images
 import clickfunnels from '../../../assets/clickfunnels.jpg';
@@ -40,12 +45,26 @@ const classes = {
     }
 }
 
+const StyledContainer = styled(Container)`
+
+     @media only screen and (min-width: 768px) {
+          width: 75vw;
+          margin: 0 auto;
+     }
+
+     @media only screen and (min-width: 1440px) {
+        width: 50vw;
+        margin: 0 auto;
+     }
+`;
+
 export const Section3 = () => {
     return (
             <Container bgColor="#000" center>
+                
 
-                <Container bgColor="#000" height="5" />
-
+            <Container bgColor="#000" height="5" />
+                <StyledContainer>
                 <Text {...classes.headline}>
                     Why High Ticket Closing?
                 </Text>
@@ -53,10 +72,13 @@ export const Section3 = () => {
                 <Text {...classes.text} align="center">
                     Take a look at advertisements on Facebook, Instagram and YouTube today. A lot of them revolve around ClickFunnels.
                 </Text>
-
-                <div>
-                    <img alt='clickfunnels' src={clickfunnels} />
-                </div>
+                
+                <Row justifyContent="center" alignItems="center">
+                    <Column xs={9} sm={8} md={5}>
+                        <img alt='clickfunnels' src={clickfunnels} style={{height: 'auto'}}/>
+                    </Column>
+                </Row>
+                
 
                 <Container bgColor="#000">
                     <Text {...classes.text}>
@@ -81,17 +103,19 @@ export const Section3 = () => {
                         With just a dry webinar funnel, it is often hard to get potential prospects to pull out their wallets and lay down cash.
                     </Text>
                 </Container>
-
+                </StyledContainer>
                 <Container bgColor="#fff">
                     <Text {...classes.text} align="center" weight="550" color="#000">
                         <cite>Humans make purchases based on emotions, then justify it with logic.</cite>
                     </Text>
                 </Container>
-
+                <StyledContainer>
                 <Container bgColor="#000">
-                    <Text align="center">
-                        <img alt='buyer psychology' src={decision} />
-                    </Text>
+                    <Row justifyContent="center" alignItems="center" style={{marginTop: '2rem'}}>
+                        <Column xs={9} sm={8} md={5}>
+                            <img alt='buyer psychology' src={decision} style={{height: 'auto'}}/>
+                        </Column>
+                    </Row>
                     <Text {...classes.text}>
                         In order for them to feel an emotional need to buy, a human, another live soul, could create that urgency by closing them over the phone. 
                     </Text>
@@ -107,10 +131,11 @@ export const Section3 = () => {
                     <Text {...classes.text}>
                         Highly trained and skilled in the art of influence and persuasion, a <span style={{fontWeight: '550', color: '#F5CA7B'}}>High Ticket Closer™</span> helps prospects connect with their vision and goals, and helps them to make a commitment to invest in themselves, by buying High Ticket products or services.
                     </Text>
-
-                    <Text align="center">
-                        <img alt='doctor' src={doctor} />
-                    </Text>
+                    <Row justifyContent="center" alignItems="center" style={{marginTop: '2rem'}}>
+                        <Column xs={9} sm={8} md={5}>
+                            <img alt='doctor' src={doctor} style={{height: 'auto'}}/>
+                        </Column>
+                    </Row>
 
                     <Text {...classes.text}>
                         Closers operate in a similar fashion to doctors and psychologists; they ask the right questions at the right time to get to the root of the pain.
@@ -140,16 +165,21 @@ export const Section3 = () => {
                         In fact, prospects will usually thank the Closer at the end of the call.
                     </Text>
 
-                    <Text align="center">
-                        <img alt='thank you' src={thankyou} />
-                    </Text>
+                    <Row justifyContent="center" alignItems="center" style={{marginTop: '2rem'}}>
+                        <Column xs={9} sm={8} md={5}>
+                            <img alt='thank you' src={thankyou} style={{height: 'auto'}}/>
+                        </Column>
+                    </Row>
 
-                    <Text {...classes.text} align="center">
+                    <Text {...classes.text} align="left">
                         The Closers’ ability to do this frees up an influencer’s, thought-leader’s or entrepreneur’s free time to stay focused on their businesses, or perhaps working in their businesses, but on some other aspect outside of sales.
                     </Text>
-
                 </Container>
-
+                </StyledContainer>
+                <StyledContainer>
+                    <FinalNavigation />
+                </StyledContainer>
+               
             </Container>
     )
 }
