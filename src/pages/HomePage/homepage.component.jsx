@@ -33,12 +33,11 @@ class Home extends React.Component {
     updateWindowDimensions = () => {
         this.setState({
             width: window.innerWidth,
-            height: window.innerHeight,
         })
     }
 
     render() {
-        const { width, height } = this.state;
+        const { width } = this.state;
 
         return (
             <div className="homepage">

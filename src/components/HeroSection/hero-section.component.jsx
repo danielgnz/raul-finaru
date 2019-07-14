@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link as ScrollLink, animateScroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 import { 
     HeroSectionContainer,

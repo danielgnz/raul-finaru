@@ -3,8 +3,6 @@ import React from 'react';
 import Container from '../../../utils/components/Container';
 import ReadMore from '../../../components/ReadMore/read-more.component';
 
-import { Row, Column } from '../../../utils/components/Grid';
-
 export const Section5 = () => {
     return (
         <Container

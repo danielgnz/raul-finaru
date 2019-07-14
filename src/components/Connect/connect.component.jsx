@@ -78,11 +78,12 @@ export const Connect = () => {
                     justifyContent="space-between"
                     style={{marginTop: '1rem'}}
                 >
-                    <Button>
-                        <i className="fab fa-facebook-f" style={classes.icon}/>
-                        Follow @Raul Finaru
-                    </Button>
-
+                    <StyledAnchor href="https://www.linkedin.com/in/raul-finaru/">
+                        <Button>
+                            <i className="fab fa-facebook-f" style={classes.icon}/>
+                            Follow @Raul Finaru
+                        </Button>
+                    </StyledAnchor>
                     <StyledAnchor href="https://www.linkedin.com/in/raul-finaru/">
                         <Button>
                             <i className="fab fa-linkedin-in" style={classes.icon}/>

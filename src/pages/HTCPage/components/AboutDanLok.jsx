@@ -12,9 +12,8 @@ export const AboutDanLok = () => {
     return(
         <ImageCard>
             <Container 
-                style={{width: '80%'}}
+                style={{width: '80%', padding: '2rem'}}
                 bgColor="#1d1919"
-                style={{padding: '2rem'}}  
             >
                 <Text
                     color="#fff"

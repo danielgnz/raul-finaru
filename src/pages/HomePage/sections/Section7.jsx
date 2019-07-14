@@ -10,9 +10,6 @@ import avt2 from '../../../assets/t2-avatar.jpeg';
 import avt3 from '../../../assets/t3-avatar.jpeg';
 
 
-import { Row, Column } from '../../../utils/components/Grid';
-
-
 const StyledContainer = styled(Container)`
     width: 90vw;
     @media only screen and (min-width: 768px) {
