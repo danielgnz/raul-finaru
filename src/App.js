@@ -8,6 +8,7 @@ import HTCPage from './pages/HTCPage/htc-page.component';
 
 //components
 import Header from './components/Header/header.component';
+import StoryPage from './pages/StoryPage/storypage.component';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
           <Route exact path='/' component={HomePage} />
           <Route path='/hire' component={HirePage} />
           <Route path='/what-is-a-high-ticket-closer' component={HTCPage} />
+          <Route path='/story' component={StoryPage} />
       </Switch>
     </div>
    

@@ -36,6 +36,10 @@ const Button = styled.div`
     cursor: pointer;
 `;
 
+const StyledAnchor = styled.a`
+    text-decoration: none;
+`
+
 const classes = {
     icon: {
         marginRight: '5px'
@@ -78,14 +82,20 @@ export const Connect = () => {
                         <i className="fab fa-facebook-f" style={classes.icon}/>
                         Follow @Raul Finaru
                     </Button>
-                    <Button>
-                        <i className="fab fa-linkedin-in" style={classes.icon}/>
-                        Connect with Raul
-                    </Button>
-                    <Button>
-                        <i className="fas fa-mail-bulk" style={classes.icon}/>
-                        Send An Email
-                    </Button>
+
+                    <StyledAnchor href="https://www.linkedin.com/in/raul-finaru/">
+                        <Button>
+                            <i className="fab fa-linkedin-in" style={classes.icon}/>
+                            Connect with Raul
+                        </Button>
+                    </StyledAnchor>
+                    <StyledAnchor href="mailto:finarummr@gmail.com">
+                        <Button>
+                            <i className="fas fa-mail-bulk" style={classes.icon}/>
+                            Send An Email
+                        </Button>
+                    </StyledAnchor>
+                    
                 </Container>
            </StyledInnerContainer>
        </StyledContainer> 

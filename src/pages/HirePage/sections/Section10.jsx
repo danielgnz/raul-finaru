@@ -12,7 +12,6 @@ import signature from '../../../assets/signature.png';
 const Button = styled(Link)`
     text-decoration: none;
     background: rgb(255, 224, 159);
-    border: 2px solid rgb(255, 224, 159);
     border-radius: 25px;
     padding: .5rem 2.5rem;
     font-size: 60%;
@@ -21,8 +20,7 @@ const Button = styled(Link)`
     cursor: pointer;
 
     &:hover {
-        color: rgb(255, 224, 159);
-        background: #000;
+        background: rgba(255, 224, 159, 0.87);
     }
 `;
 
@@ -100,7 +98,10 @@ export const Section10 = () => {
                
                     
                     <Container center>
-                        <Button>
+                        <Button onClick={() => {
+                            window.Calendly.showPopupWidget('https://calendly.com/raulfinaru/30minutes');
+                            return false;
+                        }}>
                             Fill Out Application
                         </Button>
                     </Container>

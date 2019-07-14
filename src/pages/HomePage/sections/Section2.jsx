@@ -17,7 +17,7 @@ export const Image = styled.div`
 
 export const Section2 = () => {
     return (
-        <Container height="90" center>
+        <Container height="90" center id="home-section2">
             <Text 
                 variant="h2"
                 align="center"

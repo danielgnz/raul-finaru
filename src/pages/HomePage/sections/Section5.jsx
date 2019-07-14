@@ -19,11 +19,13 @@ export const Section5 = () => {
             <ReadMore 
                 title="What is a High-Ticket Closer™?"
                 text="High-Ticket Closing™ is the art and skill of closing high-ticket offers.The psychology of conventional sales and High-Ticket Closing™ are worlds apart."
+                dest='/what-is-a-high-ticket-closer'
             />
 
             <ReadMore 
             title="How can Raul help you?"
             text="As a High-Ticket Closer™, Raul Finaru helps his High-Ticket Partners triple their sales by turning their qualified leads into high-paying customers."
+            dest='/hire'
             />
 
 

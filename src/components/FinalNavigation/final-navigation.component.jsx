@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import {
     Container,
@@ -9,6 +11,10 @@ import {
     StyledContainer,
 } from './final-navigation.style';
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: #fff;
+`;
 
 export const FinalNavigation = () => {
     return (
@@ -25,15 +31,24 @@ export const FinalNavigation = () => {
                 </Text>
 
                 <Wrapper>
-                    <Button>
-                        WORK WITH RAUL
-                    </Button>
-                    <Button>
-                        WHAT IS HTC
-                    </Button>
-                    <Button>
-                        RAUL'S STORY
-                    </Button>
+                    <StyledLink to='/hire'>
+                        <Button>
+                            WORK WITH RAUL
+                        </Button>
+                    </StyledLink>
+                   
+                   <StyledLink to='/what-is-a-high-ticket-closer'>
+                        <Button>
+                            WHAT IS HTC
+                        </Button>
+                   </StyledLink>
+                    
+                    <StyledLink to='/story'>
+                        <Button>
+                            RAUL'S STORY
+                        </Button>
+                    </StyledLink>
+
                 </Wrapper>
             </StyledContainer>
             

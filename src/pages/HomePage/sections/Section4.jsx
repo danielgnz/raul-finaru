@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Text from '../../../utils/components/Text';
 import Container from '../../../utils/components/Container';
@@ -66,9 +67,12 @@ export const TextComponent = () => {
                     <Text size="45" style={{marginTop: 0}}>
                          High-Ticket Closer & Property Investor
                     </Text>
-                    <Button>
-                         THE STORY
-                    </Button>
+                    <Link to='/story'>
+                        <Button>
+                            THE STORY
+                        </Button>
+                    </Link>
+                    
                 </Column>
             </Row>
 

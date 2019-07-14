@@ -13,6 +13,10 @@ const Button = styled.button`
     border: none;
     font-size: 55%;
     cursor: pointer;
+
+    &:hover {
+        background: #f5ca7bdb;
+    }
 `;
 
 const StyledText = styled(Text)`

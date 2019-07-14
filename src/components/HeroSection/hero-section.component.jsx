@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link as ScrollLink, animateScroll } from 'react-scroll';
+
 import { 
     HeroSectionContainer,
     HeroImageContainer,
@@ -9,7 +11,7 @@ import {
     HeroButton
 } from './hero-section.style';
 
-export const HeroSection = ({image, title, subtitle, btnText, ...otherProps}) => {
+export const HeroSection = ({image, title, subtitle, btnText, dest, ...otherProps}) => {
     return (
         <HeroSectionContainer >
             <HeroImageContainer flexCenter image={image}>
@@ -20,9 +22,18 @@ export const HeroSection = ({image, title, subtitle, btnText, ...otherProps}) =>
                     <HeroSubtitle>
                        {subtitle}
                     </HeroSubtitle>
-                    <HeroButton>
-                        {btnText}
-                    </HeroButton>
+                    <ScrollLink
+                        to={dest}
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={-70}
+                    >
+                        <HeroButton>
+                            {btnText}
+                        </HeroButton>
+                    </ScrollLink>
+                    
                 </HeroMessage>
             </HeroImageContainer>
         </HeroSectionContainer>

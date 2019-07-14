@@ -11,6 +11,7 @@ export const Section1 = () => {
                 title={`HIRE THE BEST, AND ONLY CRY ONCE`}
                 subtitle={`THE HEADSHOT CLOSER™`}
                 btnText={`GET STARTED`}
+                dest="hire-section2"
         />
     )
 }

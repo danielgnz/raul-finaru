@@ -16,7 +16,7 @@ const StyledText = styled(Text)`
 
 export const Section2 = () => {
     return (
-            <Container height="90" center >
+            <Container height="90" center id="hire-section2">
                  <StyledText variant="h1" size="100" padding="1" align="center">
             How Would You Like to Double, Triple, or Even Quadruple Your
 Sales Closing Ratios Without Ever Doing the Selling Yourself? 

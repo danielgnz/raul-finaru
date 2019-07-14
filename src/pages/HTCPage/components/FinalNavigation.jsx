@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Container from '../../../utils/components/Container';
 import Text from '../../../utils/components/Text';
@@ -49,6 +50,11 @@ const Button = styled.div`
 
 `;
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: #fff;
+`;
+
 export const FinalNavigation = () => {
     return (
         <Container 
@@ -61,15 +67,23 @@ export const FinalNavigation = () => {
                 {/* Optional Text */}
 
                 <Wrapper>
-                    <Button style={{textAlign: 'center'}}>
-                        HOME
-                    </Button>
-                    <Button style={{textAlign: 'center'}}>
-                        WORK WITH RAUL
-                    </Button>
-                    <Button style={{textAlign: 'center'}}>
-                        RAUL'S STORY
-                    </Button>
+                    <StyledLink to='/'>
+                        <Button style={{textAlign: 'center'}}>
+                            HOME
+                        </Button>
+                    </StyledLink>
+
+                    <StyledLink to='/hire'>
+                        <Button style={{textAlign: 'center'}}>
+                            WORK WITH RAUL
+                        </Button>
+                    </StyledLink>
+
+                    <StyledLink to='/story'>
+                        <Button style={{textAlign: 'center'}}>
+                            RAUL'S STORY
+                        </Button>
+                    </StyledLink>
                 </Wrapper>  
         </Container>
     )

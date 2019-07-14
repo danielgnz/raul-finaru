@@ -13,6 +13,7 @@ export const Section1 = ({ width }) => {
                 title={title}
                 subtitle={subtitle}
                 btnText={`GET STARTED`}
+                dest="home-section2"
             />
         )
  

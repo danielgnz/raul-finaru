@@ -12,7 +12,7 @@ import {
 import Container from '../../utils/components/Container';
 import Text from '../../utils/components/Text';
 
-export const ReadMore = ({title, text, ...otherProps}) => {
+export const ReadMore = ({title, text, dest, ...otherProps}) => {
     return (
         <Container  bgColor="#fff" alignItems="center" justifyContent="space-evenly" style={{height: '50%'}}>
             <Container  bgColor="#fff" center>
@@ -25,12 +25,12 @@ export const ReadMore = ({title, text, ...otherProps}) => {
                 {text}
             </StyledText>
             <Container bgColor="#fff" alignItems="center" justifyContent="space-between" height="12">
-                <ButtonLink to ='#'>
+                <ButtonLink to={dest}>
                     <RightArrow>
                         &#8250;
                     </RightArrow>
                 </ButtonLink>
-                <TextLink to='#'>
+                <TextLink to={dest}>
                     Read More
                 </TextLink>
             </Container>

@@ -11,6 +11,7 @@ export const Section1 = () => {
                 title={`WHAT IS A HIGH TICKET CLOSER?`}
                 subtitle={`THE HEADSHOT CLOSER™`}
                 btnText={`FIND OUT`}
+                dest='htc-section2'
         />
     )
 }

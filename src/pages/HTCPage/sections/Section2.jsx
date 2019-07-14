@@ -59,7 +59,7 @@ const DanLokContainer = styled(Container)`
 export const Section2 = () => {
     return (
             <div>
-                <Container bgColor="#000" center>
+                <Container bgColor="#000" center id="htc-section2">
                     <StyledContainer>
                         <Text {...classes.text}>
                         Very simply put, a  <span style={{fontWeight: '550', color: '#F5CA7B'}}>High Ticket Closer™</span> closes High-Ticket products/services over the phone. 

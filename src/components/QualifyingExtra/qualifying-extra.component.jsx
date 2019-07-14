@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import Container from '../../utils/components/Container';
 import Text from '../../utils/components/Text';
 
+import { ButtonLink, RightArrow } from '../ReadMore/read-more.style';
+
 const classes = {
     icon: {
         fontSize: '150%',
@@ -35,7 +37,7 @@ export const LinkText = styled(Link)`
     color: #6d0308;
     padding: 1rem;
     margin-bottom: 1rem;
-`
+`;
 
 export const QualifyingExtra = () => {
     return (
@@ -74,9 +76,14 @@ export const QualifyingExtra = () => {
                     Are you spending endless amounts of money, energy, and resources on training your staff and new employees to get little to no return?
                 </Text>
             </StyledContainer>
-                <LinkText to='/'>
+                <LinkText to='/hire'>
                     If so, discover why you should work with Raul.
                 </LinkText>
+                <ButtonLink to='/hire' style={{marginBottom: '2rem'}}>
+                    <RightArrow>
+                        &#8250;
+                    </RightArrow>
+                </ButtonLink>
         </Container>
     )
 }

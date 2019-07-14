@@ -70,7 +70,7 @@ export const HeroSubtitle = styled.h2`
     color: #F5CA7B;
     font-weight: 500;
 `;
-export const HeroButton = styled.button`
+export const HeroButton = styled.div`
     text-transform: uppercase;
     text-align: center;
     padding: 1rem 4rem;
@@ -78,4 +78,11 @@ export const HeroButton = styled.button`
     background: #F5CA7B;
     border: none;
     font-size: 70%;
+    cursor: pointer;
+    color: #000;
+    text-shadow: none;
+    
+    &:hover {
+        background: #f5ca7bdb;
+    }
 `;
